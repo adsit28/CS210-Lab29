@@ -1,5 +1,5 @@
 /*
- * FILE: lab29sol.c
+ * FILE: lab29.c
  * 25 Oct 2023
  * djb
  */
