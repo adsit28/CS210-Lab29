@@ -6,10 +6,9 @@
  * Purpose:  FILL IN
  * ============================================================= */
 
-#ifndef L29CARDLIST_H
-#define L29CARDLIST_H
-
-#include "l29card.h"
+#ifndef CARDLIST_H
+#define CARDLIST_H
+#include "card.h"
 
 /* a struct used to create a cardList (a list of Card structs)
  * FIELD: count - the number of cards in the list

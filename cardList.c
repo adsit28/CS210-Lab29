@@ -1,4 +1,4 @@
-/* l29cardList.c
+/* cardList.c
  * =============================================================
  * Name: Your Name
  * Section:  Your Section
@@ -9,7 +9,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "l29cardList.h"
+#include "cardList.h"
 
 CardList* createCardList(){
    CardList* newList = (CardList*) malloc(sizeof(CardList));

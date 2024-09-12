@@ -1,4 +1,4 @@
-/* l29card.h
+/* card.h
  * =============================================================
  * Name: Your Name
  * Section:  Your Section
@@ -6,7 +6,7 @@
  * Purpose:  FILL IN
  * ============================================================= */
 
-#include "l29card.h"
+#include "card.h"
 #include <stdio.h>
 #include <stdlib.h>
 

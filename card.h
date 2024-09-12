@@ -1,4 +1,4 @@
-/* l29card.h
+/* card.h
  * =============================================================
  * Name: Your Name
  * Section:  Your Section
@@ -6,8 +6,8 @@
  * Purpose:  FILL IN
  * ============================================================= */
 
-#ifndef L29CARD_H
-#define L29CARD_H
+#ifndef CARD_H
+#define CARD_H
 
 /*
  * PURPOSE:

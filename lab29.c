@@ -8,8 +8,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "l29card.h"
-#include "l29cardList.h"
+#include "card.h"
+#include "cardList.h"
 
 void playGame(){
 
