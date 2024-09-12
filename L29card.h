@@ -1,8 +1,10 @@
-/*
- * FILE: L29card.h
- * 25 Oct 2023
- * djb
- */
+/* l29card.h
+ * =============================================================
+ * Name: Your Name
+ * Section:  Your Section
+ * Project:  FILL IN
+ * Purpose:  FILL IN
+ * ============================================================= */
 
 #ifndef L29CARD_H
 #define L29CARD_H

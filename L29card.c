@@ -1,10 +1,12 @@
-/*
- * FILE: L29card.c
- * 25 Oct 2025
- * djb
- */
+/* l29card.h
+ * =============================================================
+ * Name: Your Name
+ * Section:  Your Section
+ * Project:  FILL IN
+ * Purpose:  FILL IN
+ * ============================================================= */
 
-#include "L29card.h"
+#include "l29card.h"
 #include <stdio.h>
 #include <stdlib.h>
 

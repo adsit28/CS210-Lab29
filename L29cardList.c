@@ -1,13 +1,15 @@
-/*
- * FILE: L29cardList.c
- * 25 Oct 2023
- * djb
- */
+/* l29cardList.c
+ * =============================================================
+ * Name: Your Name
+ * Section:  Your Section
+ * Project:  FILL IN
+ * Purpose:  FILL IN
+ * ============================================================= */
 
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "L29cardList.h"
+#include "l29cardList.h"
 
 CardList* createCardList(){
    CardList* newList = (CardList*) malloc(sizeof(CardList));

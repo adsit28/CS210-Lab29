@@ -1,18 +1,19 @@
-/*
- * FILE: lab29.c
- * 25 Oct 2023
- * djb
- */
-
+/* lab29.c
+ * =============================================================
+ * Name: Your Name
+ * Section:  Your Section
+ * Project:  FILL IN
+ * Purpose:  FILL IN
+ * ============================================================= */
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "L29card.h"
-#include "L29cardList.h"
+#include "l29card.h"
+#include "l29cardList.h"
 
 void playGame(){
 
-   // TODO 2: create CardList for a) deck, b) players hands, c) pile per player
+   // TASK 2: create CardList for a) deck, b) players hands, c) pile per player
    CardList* deck = NULL;
    CardList* player1Hand = NULL;
    CardList* player2Hand = NULL;
@@ -20,10 +21,10 @@ void playGame(){
    // CardList* player2Pile = NULL;
 
 
-   // TODO 3: create, populate, and shuffle the deck
+   // TASK 3: create, populate, and shuffle the deck
 
 
-   // TODO 4: deal all cards to players
+   // TASK 4: deal all cards to players
    while(!isEmpty(deck)){
        // take a card from the deck and add it to the hand of player 1
        // take a card from the deck and add it to the hand of player 2
@@ -31,19 +32,19 @@ void playGame(){
    freeCardList(deck);   
 
 
-   // TODO 5: the game continues until one player has all cards or 10,000 rounds
+   // TASK 5: the game continues until one player has all cards or 10,000 rounds
    int roundCounter = 0;
    while(isEmpty(player1Hand) || isEmpty(player2Hand)){ // edit this line
 
-      // TODO 5a: each player removes a card from hand and places on pile
+      // TASK 5a: each player removes a card from hand and places on pile
 
 
-      // TODO 5b: if there is a tie for the highest card, repeat 5a
+      // TASK 5b: if there is a tie for the highest card, repeat 5a
 
-      // TODO 5c: player who played the highest card adds piles to their hand
+      // TASK 5c: player who played the highest card adds piles to their hand
       //        : add opponents pile, then own pile
 
-      // TODO 6: often this game plays for 100's or 1000's of rounds
+      // TASK 6: often this game plays for 100's or 1000's of rounds
       //       : reduce the output to once every 100 rounds
 
       printf("-------- round: %03d\n", roundCounter); // no edit needed
@@ -58,7 +59,7 @@ void playGame(){
 
    // GAME OVER
 
-   // TODO 7: finish the 'who won' report below
+   // TASK 7: finish the 'who won' report below
    printf("GAME OVER\n");
    if(isEmpty(player1Hand)){
       printf("player TWO wins\n");
@@ -67,15 +68,14 @@ void playGame(){
    } else { // played all rounds
    }
 
-   // TODO 8: free the cardLists used in the game
+   // TASK 8: free the cardLists used in the game
 
 }
 
 int main(){
 
-// TODO 1: seed the random number generator with time
+// TASK 1: seed the random number generator with time
 //   srand(time(0));
    playGame();
    return 0;
 }
-

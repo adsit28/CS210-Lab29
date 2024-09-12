@@ -1,13 +1,15 @@
-/*
- * FILE: L29cardList.h
- * 25 Oct 2023
- * djb
- */
+/* l29cardList.h
+ * =============================================================
+ * Name: Your Name
+ * Section:  Your Section
+ * Project:  FILL IN
+ * Purpose:  FILL IN
+ * ============================================================= */
 
 #ifndef L29CARDLIST_H
 #define L29CARDLIST_H
 
-#include "L29card.h"
+#include "l29card.h"
 
 /* a struct used to create a cardList (a list of Card structs)
  * FIELD: count - the number of cards in the list
