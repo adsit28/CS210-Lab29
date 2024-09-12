@@ -13,7 +13,8 @@
 
 void playGame(){
 
-   // TASK 2: create CardList for a) deck, b) players hands, c) pile per player
+   // TASK 2: initialize CardList pointers for the deck, each players hand, and a 
+   //         discard pile for each player
    CardList* deck = NULL;
    CardList* player1Hand = NULL;
    CardList* player2Hand = NULL;
