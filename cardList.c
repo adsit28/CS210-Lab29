@@ -99,6 +99,18 @@ void appendCard(CardList* cardList, Card* card){
    }
 }
 
+void prependCard(CardList* cardList, Card* card){
+   if (cardList->count == 0) {
+      cardList->topCard = card;
+      cardList->bottomCard = card;
+      cardList->count = 1;
+   } else {
+      card->nextCard = cardList->topCard;
+      cardList->topCard = card;
+      cardList->count += 1;
+   }
+}
+
 Card* getTopCard(CardList* cardList){
    if(cardList->topCard == NULL){
       return NULL;

@@ -23,6 +23,7 @@ typedef struct {
 
 /* createCardList - initializes a CardList struct
  * sets count, topCard, and bottomCard to valid values
+ * @return ptr to the newly created cardList
  */
 CardList* createCardList();
 
@@ -43,11 +44,13 @@ int isEmpty(CardList* cardList);
 
 /* listLength - returns number of cards on the list
  * @param cardList - the list to check
+ * @return the length of the cardList
  */
 int listLength(CardList* cardList);
 
-/* makeDeck - populates the list with a standard set of 52-cards
+/* makeDeck - populates a cardList with a standard set of 52-cards
  * @param deck - the cardList to populate
+ * @pre createList() has been called on deck
  */
 void makeDeck(CardList* deck);
 
@@ -61,6 +64,12 @@ void shuffleCardList(CardList* cardList);
  * @param card - a Card to add to the list
  */
 void appendCard(CardList* cardList, Card* card);
+
+/* prependCard - add a card to the beginning of the cardList
+ * @param cardList - the list to add the card to
+ * @param card - a Card to add to the list
+ */
+void prependCard(CardList* cardList, Card* card);
 
 /* lookAtBottomCard - returns a pointer to the bottom card
  * @param cardList - the cardList to look at (the list is unchanged)

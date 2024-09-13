@@ -13,8 +13,9 @@
 
 void playGame(){
 
-   // TASK 2: initialize CardList pointers for the deck, each players hand, and a 
-   //         discard pile for each player
+   // TASK 2: declare CardList pointers for the deck, each players hand, and a 
+   //         discard pile for each player and initialize each cardList by calling
+   //         createDeck()
    CardList* deck = NULL;
    CardList* player1Hand = NULL;
    CardList* player2Hand = NULL;
@@ -22,20 +23,23 @@ void playGame(){
    // CardList* player2Pile = NULL;
 
 
-   // TASK 3: create, populate, and shuffle the deck
+   // TASK 3: populate the deck with cards then shuffle the deck
 
 
    // TASK 4: deal all cards to players
    while(!isEmpty(deck)){
        // take a card from the deck and add it to the hand of player 1
+       
        // take a card from the deck and add it to the hand of player 2
    }
+   // Free the deck as all cards have been delt and will not return
+   // to the deck.
    freeCardList(deck);   
 
 
    // TASK 5: the game continues until one player has all cards or 10,000 rounds
    int roundCounter = 0;
-   while(isEmpty(player1Hand) || isEmpty(player2Hand)){ // edit this line
+   while(1){ // edit this line
 
       // TASK 5a: each player removes a card from hand and places on pile
 
