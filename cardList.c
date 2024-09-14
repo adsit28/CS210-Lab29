@@ -104,6 +104,7 @@ void prependCard(CardList* cardList, Card* card){
       cardList->topCard = card;
       cardList->bottomCard = card;
       cardList->count = 1;
+      card->nextCard = NULL;
    } else {
       card->nextCard = cardList->topCard;
       cardList->topCard = card;

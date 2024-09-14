@@ -88,9 +88,10 @@ Card* getTopCard(CardList* cardList);
  */
 Card* lookAtTopCard(CardList* cardList);
 
-/* appendCardList - concatenate two lists
+/* @brief concatenate two lists
  * @param list1 - the list that grows
- * @param list2 - the list that becomes part of list1
+ * @param list2 - the list that becomes part of list1 this list 
+ * is emptied after the append
  */
 void appendCardList(CardList* list1, CardList* list2);
 
