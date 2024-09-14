@@ -54,10 +54,10 @@ void playGame(){
       // TASK 5b: if there is a tie for the highest card, repeat 5a
 
       // TASK 5c: player who played the highest card adds piles to their hand
-      //        : add opponents pile, then own pile
+      //          add opponents pile, then own pile
 
-      // TASK 6: often this game plays for 100's or 1000's of rounds
-      //       : reduce the output to once every 100 rounds
+      // TASK 6: often this game plays can play for 100's of rounds
+      //         reduce the output to once every 5 rounds
 
       printf("-------- round: %03d\n", roundNum); // no edit needed
       printf("player 1 hand has: ");   // no need to edit this line
