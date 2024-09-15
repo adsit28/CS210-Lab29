@@ -35,6 +35,7 @@ void playGame(){
        // take a card from the deck and add it to the hand of player 1
        
        // take a card from the deck and add it to the hand of player 2
+
    }
    // Free the deck as all cards have been delt and will not return
    // to the deck.
@@ -43,20 +44,22 @@ void playGame(){
 
    // TASK 5: the game continues until one player has all cards or 200 rounds 
    //         are complete
-   int roundNum = 0; // tracks round number
+   int roundNum = 1; // tracks round number
    int winner = TIE; // used to indicate which player wins
    while(1){ // edit this line
 
-      // TASK 5a: start the game by having each player removes a card from their 
-      //          hand and place it on their pile
+      // TASK 5b: we now need to determine which player wins this round or if 
+      //          there is a tie for the highest card. you should handle ties
+      //          first.  when there is a tie add 4 cards to each players 
+      //          pile and then compare top card ranks to determine a winner 
+      //          for this round. If no winner is found repeat this process 
+      //          until a round winner is determined or if at anytime a players 
+      //          hand becomes empty that player loses the game.
 
-
-      // TASK 5b: if there is a tie for the highest card, repeat 5a
-
-      // TASK 5c: player who played the highest card adds piles to their hand
+      // TASK 5c: player who played the highest card adds piles to their hand,
       //          add opponents pile, then own pile
 
-      // TASK 6: often this game plays can play for 100's of rounds
+      // TASK 6: often this game can go on for 100's of rounds
       //         reduce the output to once every 5 rounds
 
       printf("-------- round: %03d\n", roundNum); // no edit needed
@@ -78,7 +81,8 @@ void playGame(){
       winner = ONE_WINS;
    } else if(isEmpty(player1Hand)){
       winner = TWO_WINS;
-   } else { // played all rounds
+   } else { 
+      // played all rounds without a winner
    }
    switch (winner) {
       case ONE_WINS:
@@ -98,7 +102,7 @@ void playGame(){
 
 int main(){
 
-// TASK 1: seed the random number generator with time
+// TASK 1: seed the random number generator with time and include proper header
 //   srand(time(0));
    playGame();
    return 0;
