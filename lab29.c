@@ -48,6 +48,9 @@ void playGame(){
    int winner = TIE; // used to indicate which player wins
    while(1){ // edit this line
 
+      // TASK 5a: start the game by having each player remove a card from their 
+      //          hand and place it on their pile
+
       // TASK 5b: we now need to determine which player wins this round or if 
       //          there is a tie for the highest card. you should handle ties
       //          first.  when there is a tie add 4 cards to each players 
