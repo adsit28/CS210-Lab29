@@ -78,7 +78,8 @@ void playGame(){
    // GAME OVER
 
    // TASK 7: finish the 'who won' report below.  Provided code doesn't account for the
-   //         round limit being reached.
+   //         round limit being reached.  So, be sure to account for the round limit being 
+   //         reached in adddition to one player winning prior to that.
    printf("GAME OVER\n");
    if(isEmpty(player2Hand)){
       winner = ONE_WINS;
