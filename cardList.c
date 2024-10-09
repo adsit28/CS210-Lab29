@@ -20,6 +20,10 @@ CardList* createCardList(){
 }
 
 void freeCardList(CardList* cardList){
+   if (cardList == NULL) {
+      fprintf(stderr, "parameter is NULL...exiting\n");
+      exit(1);
+   }
    Card* nextCard = cardList->topCard;
 
    while(nextCard != NULL){
@@ -31,6 +35,10 @@ void freeCardList(CardList* cardList){
 }
 
 void makeDeck(CardList* deck){
+   if (deck == NULL) {
+      fprintf(stderr, "parameter is NULL...exiting\n");
+      exit(1);
+   }
    Card* newCard = NULL;
 
    char SUIT[] = {'S', 'H', 'C', 'D'};
@@ -44,14 +52,26 @@ void makeDeck(CardList* deck){
 }
 
 int isEmpty(CardList* cardList){
+   if (cardList == NULL) {
+      fprintf(stderr, "parameter is NULL...exiting\n");
+      exit(1);
+   }
    return cardList->count == 0;
 }
 
 int listLength(CardList* cardList){
+   if (cardList == NULL) {
+      fprintf(stderr, "parameter is NULL...exiting\n");
+      exit(1);
+   }   
    return cardList->count;
 }
 
 void shuffleCardList(CardList* cardList){
+   if (cardList == NULL) {
+      fprintf(stderr, "parameter is NULL...exiting\n");
+      exit(1);
+   }
    CardList* list1 = createCardList();
    CardList* list2 = createCardList();
 
@@ -84,6 +104,10 @@ void shuffleCardList(CardList* cardList){
 }
 
 void appendCard(CardList* cardList, Card* card){
+   if (cardList == NULL || card == NULL) {
+      fprintf(stderr, "parameter is NULL...exiting\n");
+      exit(1);
+   }
    card->nextCard = NULL;
    if(cardList->topCard == NULL){
       cardList->topCard = card;
@@ -100,6 +124,10 @@ void appendCard(CardList* cardList, Card* card){
 }
 
 void prependCard(CardList* cardList, Card* card){
+   if (cardList == NULL || card == NULL) {
+      fprintf(stderr, "parameter is NULL...exiting\n");
+      exit(1);
+   }
    if (cardList->count == 0) {
       cardList->topCard = card;
       cardList->bottomCard = card;
@@ -113,6 +141,10 @@ void prependCard(CardList* cardList, Card* card){
 }
 
 Card* getTopCard(CardList* cardList){
+   if (cardList == NULL) {
+      fprintf(stderr, "parameter is NULL...exiting\n");
+      exit(1);
+   }
    if(cardList->topCard == NULL){
       return NULL;
    }
@@ -125,15 +157,27 @@ Card* getTopCard(CardList* cardList){
 }
 
 Card* lookAtTopCard(CardList* cardList){
+   if (cardList == NULL) {
+      fprintf(stderr, "parameter is NULL...exiting\n");
+      exit(1);
+   }
    return cardList->topCard;
 }
 
 Card* lookAtBottomCard(CardList* cardList){
+   if (cardList == NULL) {
+      fprintf(stderr, "parameter is NULL...exiting\n");
+      exit(1);
+   }
    return cardList->bottomCard;
 }
 
 #define SEPERATOR_LENGTH 4
 void displayCardList(CardList* cardList){
+   if (cardList == NULL) {
+      fprintf(stderr, "parameter is NULL...exiting\n");
+      exit(1);
+   }
    Card* nextCard = cardList->topCard;
    char seperator[SEPERATOR_LENGTH] = "";
 
@@ -150,6 +194,10 @@ void displayCardList(CardList* cardList){
 }
 
 void appendCardList(CardList* list1, CardList* list2){
+   if (list1 == NULL || list2 == NULL) {
+      fprintf(stderr, "parameter is NULL...exiting\n");
+      exit(1);
+   }
    if(list1->count == 0){
       list1->topCard = list2->topCard;
       list1->bottomCard = list2->bottomCard;
