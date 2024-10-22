@@ -10,13 +10,14 @@
 				"-Wall",
 				"-Werror",
 				"*.c",
+				"*.o",
 				"-lm",
 				"-lcurses",
 				"-o",
-				"${fileDirname}/${fileBasenameNoExtension}"
+				"${fileDirname}/lab29"
 			],
 			"options": {
-				"cwd": "${fileDirname}"
+				//"cwd": "${fileDirname}"
 			},
 			"problemMatcher": [
 				"$gcc"
