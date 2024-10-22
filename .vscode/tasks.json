@@ -15,7 +15,7 @@
 				"-lm",
 				"-lcurses",
 				"-o",
-				"${fileDirname}/lab29"
+				"lab29"
 			],
 			"options": {
 				//"cwd": "${fileDirname}"
