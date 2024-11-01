@@ -19,23 +19,27 @@ void playGame(){
 
    // TASK 2: declare CardList pointers for the deck, each players hand, and a 
    //         discard pile for each player and initialize each cardList by calling
+   
    //         createDeck()
-   CardList* deck = NULL;
+   CardList* deck = createCardList();
    CardList* player1Hand = NULL;
    CardList* player2Hand = NULL;
-   // CardList* player1Pile = NULL;
-   // CardList* player2Pile = NULL;
+   CardList* player1Pile = NULL;
+   CardList* player2Pile = NULL;
 
 
    // TASK 3: populate the deck with cards then shuffle the deck
-
+   makeDeck(deck);
+   shuffleCardList(deck);
 
    // TASK 4: deal all cards in the deck to players hands
+
    while(!isEmpty(deck)){
        // take a card from the deck and add it to the hand of player 1
-       
-       // take a card from the deck and add it to the hand of player 2
+       appendCard(player1Hand, getTopCard(deck));
 
+       // take a card from the deck and add it to the hand of player 2
+      appendCard(player2Hand, getTopCard(deck));
    }
    // Free the deck as all cards have been delt and will not return
    // to the deck.
@@ -50,7 +54,8 @@ void playGame(){
 
       // TASK 5a: start the game by having each player remove a card from their 
       //          hand and place it on their pile
-
+   appendCard(player1Hand, player1Pile);
+   appendCard(player2Hand, player2Pile);
       // TASK 5b: we now need to determine which player wins this round or if 
       //          there is a tie for the highest card. you should handle ties
       //          first.  when there is a tie add 4 cards to each players 
@@ -58,9 +63,26 @@ void playGame(){
       //          for this round. If no winner is found repeat this process 
       //          until a round winner is determined or if at anytime a players 
       //          hand becomes empty that player loses the game.
-
+     
+      if(getTopCard(player1Pile) == getTopCard(player2Pile)){
+         while(getTopCard(player1Pile) == getTopCard(player2Pile)){
+            for(int i = 0; i < 4; i++){
+               appendCard(player1Hand, player1Pile);
+               appendCard(player2Hand, player2Pile);
+            }
+         }
+      }
+   
       // TASK 5c: player who played the highest card adds piles to their hand,
       //          add opponents pile, then own pile
+      if (getTopCard(player1Pile) > getTopCard(player2Pile)){
+         appendCardList(player2Pile, player1Hand);
+         appendCardList(player1Pile, player1Hand);
+      }
+      if (getTopCard(player1Pile) < getTopCard(player2Pile)){
+         appendCardList(player1Pile, player2Hand);
+         appendCardList(player2Pile, player2Hand);
+      }
 
       // TASK 6: often this game can go on for 100's of rounds
       //         reduce the output to once every 5 rounds
@@ -86,7 +108,7 @@ void playGame(){
    } else if(isEmpty(player1Hand)){
       winner = TWO_WINS;
    } else { 
-      // played all rounds without a winner
+      winner = TIE;
    }
    switch (winner) {
       case ONE_WINS:
@@ -101,13 +123,17 @@ void playGame(){
    }
 
    // TASK 8: free the cardLists used in the game
+   freeCardList(player1Hand);
+   freeCardList(player2Hand);
+   freeCardList(player1Pile);
+   freeCardList(player2Pile);
 
 }
 
 int main(){
 
 // TASK 1: seed the random number generator with time and include proper header
-//   srand(time(0));
+   srand(time(0));
    playGame();
    return 0;
 }
